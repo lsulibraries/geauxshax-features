@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Instructor Role feature.
+ */
+
+include_once 'instructor_role.features.inc';

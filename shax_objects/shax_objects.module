@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Shax Objects feature.
+ */
+
+include_once 'shax_objects.features.inc';
