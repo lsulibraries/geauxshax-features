@@ -138,15 +138,10 @@ function shax_objects_feeds_importer_default() {
             'language' => 'und',
           ),
           7 => array(
-            'source' => 'Section',
-            'target' => 'field_section',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          8 => array(
             'source' => 'Material Type',
             'target' => 'field_material_type',
             'unique' => FALSE,
+            'language' => 'und',
           ),
         ),
         'update_existing' => '0',
