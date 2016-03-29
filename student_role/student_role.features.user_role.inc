@@ -13,7 +13,7 @@ function student_role_user_default_roles() {
   // Exported role: student.
   $roles['student'] = array(
     'name' => 'student',
-    'weight' => 2,
+    'weight' => 4,
   );
 
   return $roles;
