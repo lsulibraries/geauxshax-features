@@ -83,6 +83,10 @@ function shax_objects_views_default_views() {
   $handler->display->display_options['fields']['field_material_type']['id'] = 'field_material_type';
   $handler->display->display_options['fields']['field_material_type']['table'] = 'field_data_field_material_type';
   $handler->display->display_options['fields']['field_material_type']['field'] = 'field_material_type';
+  /* Field: Content: Shax Object: Image */
+  $handler->display->display_options['fields']['field__field_shax_object_image']['id'] = 'field__field_shax_object_image';
+  $handler->display->display_options['fields']['field__field_shax_object_image']['table'] = 'field_data_field__field_shax_object_image';
+  $handler->display->display_options['fields']['field__field_shax_object_image']['field'] = 'field__field_shax_object_image';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -195,6 +199,75 @@ function shax_objects_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Shax object (field_shax_object) - reverse */
+  $handler->display->display_options['relationships']['reverse_field_shax_object_node']['id'] = 'reverse_field_shax_object_node';
+  $handler->display->display_options['relationships']['reverse_field_shax_object_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_shax_object_node']['field'] = 'reverse_field_shax_object_node';
+  $handler->display->display_options['relationships']['reverse_field_shax_object_node']['label'] = 'field_shax_object - reverse';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Shax Object: Image */
+  $handler->display->display_options['fields']['field__field_shax_object_image']['id'] = 'field__field_shax_object_image';
+  $handler->display->display_options['fields']['field__field_shax_object_image']['table'] = 'field_data_field__field_shax_object_image';
+  $handler->display->display_options['fields']['field__field_shax_object_image']['field'] = 'field__field_shax_object_image';
+  $handler->display->display_options['fields']['field__field_shax_object_image']['relationship'] = 'reverse_field_shax_object_node';
+  $handler->display->display_options['fields']['field__field_shax_object_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field__field_shax_object_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field__field_shax_object_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field__field_shax_object_image']['settings'] = array(
+    'image_style' => 'shax_thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="obj-title"><a href="[title]">[title]</a><div>
+[field__field_shax_object_image]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  /* Field: Content: Year */
+  $handler->display->display_options['fields']['field_year']['id'] = 'field_year';
+  $handler->display->display_options['fields']['field_year']['table'] = 'field_data_field_year';
+  $handler->display->display_options['fields']['field_year']['field'] = 'field_year';
+  $handler->display->display_options['fields']['field_year']['exclude'] = TRUE;
+  /* Field: Content: Catalog URL */
+  $handler->display->display_options['fields']['field_catalog_url']['id'] = 'field_catalog_url';
+  $handler->display->display_options['fields']['field_catalog_url']['table'] = 'field_data_field_catalog_url';
+  $handler->display->display_options['fields']['field_catalog_url']['field'] = 'field_catalog_url';
+  $handler->display->display_options['fields']['field_catalog_url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_catalog_url']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_catalog_url']['type'] = 'text_plain';
+  /* Field: Content: Call Number */
+  $handler->display->display_options['fields']['field_call_number']['id'] = 'field_call_number';
+  $handler->display->display_options['fields']['field_call_number']['table'] = 'field_data_field_call_number';
+  $handler->display->display_options['fields']['field_call_number']['field'] = 'field_call_number';
+  $handler->display->display_options['fields']['field_call_number']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_call_number']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_call_number']['alter']['text'] = '<a href="[field_catalog_url]">[field_call_number]</a>';
+  $handler->display->display_options['fields']['field_call_number']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_call_number']['type'] = 'text_plain';
+  /* Field: Content: Author */
+  $handler->display->display_options['fields']['field_author']['id'] = 'field_author';
+  $handler->display->display_options['fields']['field_author']['table'] = 'field_data_field_author';
+  $handler->display->display_options['fields']['field_author']['field'] = 'field_author';
+  $handler->display->display_options['fields']['field_author']['label'] = 'About This Item';
+  $handler->display->display_options['fields']['field_author']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_author']['alter']['text'] = '<div class="obj-description">[body]<div>
+<div class="obj-author"><span class="obj-date">[field_year]</span>, [field_author]<div>
+<div class="obj-callnum"><a href="[field_catalog_url]">[field_call_number]</a></div>';
+  $handler->display->display_options['fields']['field_author']['type'] = 'text_plain';
+  /* Field: Content: Material Type */
+  $handler->display->display_options['fields']['field_material_type']['id'] = 'field_material_type';
+  $handler->display->display_options['fields']['field_material_type']['table'] = 'field_data_field_material_type';
+  $handler->display->display_options['fields']['field_material_type']['field'] = 'field_material_type';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['path'] = 'shax-objects';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Shax Objects';

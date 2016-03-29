@@ -45,6 +45,14 @@ function student_role_views_default_views() {
   $handler->display->display_options['fields']['field_paratext']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['field_paratext']['alter']['more_link'] = TRUE;
   $handler->display->display_options['fields']['field_paratext']['alter']['trim'] = TRUE;
+  /* Field: Content: Semester */
+  $handler->display->display_options['fields']['field_semester']['id'] = 'field_semester';
+  $handler->display->display_options['fields']['field_semester']['table'] = 'field_data_field_semester';
+  $handler->display->display_options['fields']['field_semester']['field'] = 'field_semester';
+  /* Field: Content: Section */
+  $handler->display->display_options['fields']['field_section']['id'] = 'field_section';
+  $handler->display->display_options['fields']['field_section']['table'] = 'field_data_field_section';
+  $handler->display->display_options['fields']['field_section']['field'] = 'field_section';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -63,6 +71,38 @@ function student_role_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'page' => 'page',
+  );
+  /* Filter criterion: Content: Section (field_section) */
+  $handler->display->display_options['filters']['field_section_value']['id'] = 'field_section_value';
+  $handler->display->display_options['filters']['field_section_value']['table'] = 'field_data_field_section';
+  $handler->display->display_options['filters']['field_section_value']['field'] = 'field_section_value';
+  $handler->display->display_options['filters']['field_section_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_section_value']['expose']['operator_id'] = 'field_section_value_op';
+  $handler->display->display_options['filters']['field_section_value']['expose']['label'] = 'Section';
+  $handler->display->display_options['filters']['field_section_value']['expose']['operator'] = 'field_section_value_op';
+  $handler->display->display_options['filters']['field_section_value']['expose']['identifier'] = 'field_section_value';
+  $handler->display->display_options['filters']['field_section_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    1 => 0,
+  );
+  /* Filter criterion: Content: Semester (field_semester) */
+  $handler->display->display_options['filters']['field_semester_value']['id'] = 'field_semester_value';
+  $handler->display->display_options['filters']['field_semester_value']['table'] = 'field_data_field_semester';
+  $handler->display->display_options['filters']['field_semester_value']['field'] = 'field_semester_value';
+  $handler->display->display_options['filters']['field_semester_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_semester_value']['expose']['operator_id'] = 'field_semester_value_op';
+  $handler->display->display_options['filters']['field_semester_value']['expose']['label'] = 'Semester';
+  $handler->display->display_options['filters']['field_semester_value']['expose']['operator'] = 'field_semester_value_op';
+  $handler->display->display_options['filters']['field_semester_value']['expose']['identifier'] = 'field_semester_value';
+  $handler->display->display_options['filters']['field_semester_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    1 => 0,
   );
 
   /* Display: Page */
