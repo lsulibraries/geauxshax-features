@@ -203,6 +203,7 @@ function student_role_field_default_field_bases() {
     'settings' => array(
       'referenceable_types' => array(
         'article' => 0,
+        'basic_page' => 0,
         'page' => 0,
         'special_collections_objects' => 'special_collections_objects',
       ),
