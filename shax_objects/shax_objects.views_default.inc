@@ -211,19 +211,17 @@ function shax_objects_views_default_views() {
   $handler->display->display_options['fields']['field__field_shax_object_image']['table'] = 'field_data_field__field_shax_object_image';
   $handler->display->display_options['fields']['field__field_shax_object_image']['field'] = 'field__field_shax_object_image';
   $handler->display->display_options['fields']['field__field_shax_object_image']['relationship'] = 'reverse_field_shax_object_node';
-  $handler->display->display_options['fields']['field__field_shax_object_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field__field_shax_object_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field__field_shax_object_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field__field_shax_object_image']['settings'] = array(
     'image_style' => 'shax_thumbnail',
-    'image_link' => '',
+    'image_link' => 'content',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="obj-title"><a href="[title]">[title]</a><div>
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="obj-title">[view_node][title]<div>
 [field__field_shax_object_image]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;

@@ -52,7 +52,7 @@ function block_settings_default_fe_block_settings() {
         'weight' => -10,
       ),
       'skeletontheme' => array(
-        'region' => 'featured_right',
+        'region' => 'header_top_left',
         'status' => 1,
         'theme' => 'skeletontheme',
         'weight' => -1,

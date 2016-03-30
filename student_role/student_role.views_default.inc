@@ -49,6 +49,10 @@ function student_role_views_default_views() {
   $handler->display->display_options['fields']['field_semester']['id'] = 'field_semester';
   $handler->display->display_options['fields']['field_semester']['table'] = 'field_data_field_semester';
   $handler->display->display_options['fields']['field_semester']['field'] = 'field_semester';
+  /* Field: Content: Course */
+  $handler->display->display_options['fields']['field_course']['id'] = 'field_course';
+  $handler->display->display_options['fields']['field_course']['table'] = 'field_data_field_course';
+  $handler->display->display_options['fields']['field_course']['field'] = 'field_course';
   /* Field: Content: Section */
   $handler->display->display_options['fields']['field_section']['id'] = 'field_section';
   $handler->display->display_options['fields']['field_section']['table'] = 'field_data_field_section';
