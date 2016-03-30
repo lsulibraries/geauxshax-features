@@ -82,6 +82,24 @@ function instructor_role_user_default_permissions() {
     'module' => 'filter',
   );
 
+  // Exported permission: 'administer nodes'.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create basic_page content'.
+  $permissions['create basic_page content'] = array(
+    'name' => 'create basic_page content',
+    'roles' => array(
+      'instructor' => 'instructor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
@@ -101,6 +119,15 @@ function instructor_role_user_default_permissions() {
       'instructor' => 'instructor',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete any basic_page content'.
+  $permissions['delete any basic_page content'] = array(
+    'name' => 'delete any basic_page content',
+    'roles' => array(
+      'instructor' => 'instructor',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete any document files'.
@@ -123,6 +150,16 @@ function instructor_role_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'delete any page content'.
+  $permissions['delete any page content'] = array(
+    'name' => 'delete any page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any video files'.
   $permissions['delete any video files'] = array(
     'name' => 'delete any video files',
@@ -141,6 +178,15 @@ function instructor_role_user_default_permissions() {
       'student' => 'student',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own basic_page content'.
+  $permissions['delete own basic_page content'] = array(
+    'name' => 'delete own basic_page content',
+    'roles' => array(
+      'instructor' => 'instructor',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete own document files'.
@@ -263,6 +309,15 @@ function instructor_role_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit any basic_page content'.
+  $permissions['edit any basic_page content'] = array(
+    'name' => 'edit any basic_page content',
+    'roles' => array(
+      'instructor' => 'instructor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any document files'.
   $permissions['edit any document files'] = array(
     'name' => 'edit any document files',
@@ -311,6 +366,15 @@ function instructor_role_user_default_permissions() {
       'student' => 'student',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own basic_page content'.
+  $permissions['edit own basic_page content'] = array(
+    'name' => 'edit own basic_page content',
+    'roles' => array(
+      'instructor' => 'instructor',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit own comments'.

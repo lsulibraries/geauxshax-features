@@ -35,6 +35,7 @@ function student_role_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'instructor' => 'instructor',
       'student' => 'student',
     ),
     'module' => 'node',
@@ -45,6 +46,7 @@ function student_role_user_default_permissions() {
     'name' => 'delete own page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'instructor' => 'instructor',
       'student' => 'student',
     ),
     'module' => 'node',
@@ -55,6 +57,7 @@ function student_role_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'instructor' => 'instructor',
       'student' => 'student',
     ),
     'module' => 'node',
