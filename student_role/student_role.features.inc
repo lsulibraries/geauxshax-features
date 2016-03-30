@@ -21,6 +21,31 @@ function student_role_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function student_role_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: shax_thumbnail.
+  $styles['shax_thumbnail'] = array(
+    'label' => 'Shax Thumbnail',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 150,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function student_role_node_info() {
